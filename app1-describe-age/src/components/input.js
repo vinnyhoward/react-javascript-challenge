@@ -19,6 +19,9 @@ handleChange(event) {
   console.log(event.target.value);
 }
 
+//Bonuses: 
+//If string, output "Not an age"
+//Appear visually on the screen
 describeAge(num) {
   let howOld = num <= 12 ? "kid" 
   : num >= 13 && num <= 17 ? "teenager" 
