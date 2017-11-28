@@ -65,12 +65,6 @@ areYouLit(ounces, alcohol, weight, sex, time) {
 console.log('lit stats', this.state.ounces, this.state.alcohol, this.state.weight, this.state.sex, this.state.time);
 }
   render() {
-console.log('ounces', this.state.ounces);
-console.log('alcohol', this.state.alcohol);
-console.log('weight', this.state.weight);
-console.log('sex', this.state.sex);
-console.log('time', this.state.time);
-console.log('lit', this.state.lit);
     return (
       <div className="App">
         <header className="App-header">
