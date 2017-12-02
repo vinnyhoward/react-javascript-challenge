@@ -1,3 +1,7 @@
+body {
+  background-color: rgb(48, 48, 48);
+}
+
 .App {
   text-align: center;
 }
@@ -9,13 +13,17 @@
 
 .App-header {
   background-color: #222;
-  height: 150px;
+  height: 220px;
   padding: 20px;
   color: white;
 }
 
 .App-title {
   font-size: 1.5em;
+}
+
+.sub-title {
+  font-size: 1.2em;
 }
 
 .App-intro {
@@ -25,4 +33,36 @@
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+.input-wrapper {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+  align-items: center;
+  padding: 20px;
+}
+
+.input-field {
+  width: 310px;
+  height: 25px;
+  padding-left: 10px;
+  font-size: 14px;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.button-thing{
+  width: 320px;
+  height: 30px;
+  padding-left: 10px;
+  font-size: 14px;
+  background: rgb(62, 153, 228);
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.sub-title {
+  font-size: 1.2em;
 }

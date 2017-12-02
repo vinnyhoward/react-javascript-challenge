@@ -40,7 +40,7 @@ newNumArr.push(+splitNum.charAt(i))
 var highest = () => [].slice.call(newNumArr).sort(function(a,b){ 
     return (b - a)
 })
-return parseInt(highest().toString().replace(/,/g , ""))
+var superSized = parseInt(highest().toString().replace(/,/g , ""))
 }
 
 
