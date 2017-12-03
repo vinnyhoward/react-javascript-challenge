@@ -6,12 +6,11 @@ class App extends Component {
   constructor(){
     super()
     this.state={
-      input: '',
+      years: [],
       starting: [],
       percent: [],
       aug: [],
       targetPop: [],
-      years: [],
     }
     this.handleChangeStarting = this.handleChangeStarting.bind(this)
     this.handlePercent = this.handlePercent.bind(this)
@@ -20,26 +19,26 @@ class App extends Component {
     this.populationGrowth = this.populationGrowth.bind(this)
   }
 handleChangeStarting(event) {
-this.setState({
+  this.setState({
   starting: event.target.value
 })
 }
 
 handlePercent(event) {
   this.setState({
-    percent: event.target.value
+  percent: event.target.value
   })
 }
 
 handleAug(event) {
   this.setState({
-    aug: event.target.value
+  aug: event.target.value
   })
 }
 
 handleTargetPop(event) {
   this.setState({
-    targetPop: event.target.value
+  targetPop: event.target.value
   })
 }
 
