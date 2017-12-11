@@ -47,7 +47,7 @@ sortNumber(integers){
       <div className="App">
         <header className="App-header">
 
-          <h1 className="App-title">Return Even String</h1>
+          <h1 className="App-title">Find the Parity Outlier</h1>
           <p className="title">{this.state.number}</p>
         </header>
         <div className='content-wrapper'>
@@ -68,3 +68,4 @@ sortNumber(integers){
 }
 
 export default App;
+
