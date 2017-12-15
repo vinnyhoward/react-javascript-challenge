@@ -1,18 +1,49 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+  constructor() {
+    super()
+    this.state={
+      value: '',
+      letters: [],
+    }
+    this.handleChangeValue = this.handleChangeValue.bind(this)
+    this.accumulate.bind = this.accumulate.bind(this)
+}
+
+handleChangeValue(event) {
+  this.setState({
+    value: event.target.value
+  })
+}
+
+accumulate(s) {
+  this.setState({
+    letters: s.split('').map((x,index) => x.toUpperCase()+Array(index+1).join(x.toLowerCase())).join('-')
+  }) 
+}
+
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+
+          <h1 className="App-title">Mumbling</h1>
+          <div className="title">{this.state.letters}</div>
         </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <div className='content-wrapper'>
+       <input 
+       type="text" 
+       onChange={this.handleChangeValue} 
+       className='main-input' 
+       placeholder='Enter Random Letters Here'
+       />
+       <button 
+       onClick={() => this.accumulate(this.state.value)}
+       className='main-button'
+       >Accumulate</button>
+        </div>
       </div>
     );
   }

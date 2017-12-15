@@ -36,7 +36,7 @@ bubbleSortNum = (intArr) => {
       <div className="App">
         <header className="App-header">
 
-          <h1 className="App-title">Most Digits</h1>
+          <h1 className="App-title">Bubble Sort</h1>
           <div className="title">{this.state.sortNum}</div>
         </header>
         <div className='content-wrapper'>
@@ -49,7 +49,7 @@ bubbleSortNum = (intArr) => {
        <button 
        onClick={() => this.bubbleSortNum(this.state.value)}
        className='main-button'
-       >Bubble Sort</button>
+       >Sort</button>
         </div>
       </div>
     );
