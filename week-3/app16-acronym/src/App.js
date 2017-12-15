@@ -1,21 +1,52 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+  constructor() {
+    super()
+    this.state={
+      value: '',
+      firstLetter: [],
+    }
+    this.handleChange = this.handleChange.bind(this)
+    this.makeString.bind = this.makeString.bind(this)
+}
+
+handleChange(event) {
+  this.setState({
+    value: event.target.value
+  })
+}
+
+makeString = s => {
+  this.setState({
+    firstLetter: s.split(' ').map(x => x[0]).join('')
+  })
+}
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+
+          <h1 className="App-title">Create an Acronym</h1>
+          <p className="title">{this.state.firstLetter}</p>
         </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <div className='content-wrapper'>
+       <input 
+       type="text" 
+       onChange={this.handleChange} 
+       className='main-input' 
+       placeholder='Enter Words Here'
+       />
+       <button 
+       onClick={() => this.makeString(this.state.value)}
+       className='main-button'
+       >CREATE</button>
+        </div>
       </div>
     );
   }
 }
 
 export default App;
+
